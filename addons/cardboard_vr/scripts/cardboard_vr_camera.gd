@@ -12,7 +12,7 @@ class_name CardboardVRCamera extends Camera3D
 @export_category("Eyes")
 @export_range(0.1, 2.0) var EyesSeparation : float = 2
 @export_range(0, 5.0) var EyeHeight : float =  0.8
-@export_range(-360, 360) var EyeDivergenceAngle : float =  20
+@export_range(-360, 360) var EyeConvergencyAngle : float =  3
 
 var viewScene = preload("res://addons/cardboard_vr/scenes/CardboardView.tscn")
 var left_camera_3d: Camera3D = Camera3D.new()
@@ -55,13 +55,13 @@ func _ready() -> void:
 	add_child(View)
 	add_child(LeftEyeSubViewPort)
 	add_child(RightEyeSubViewPort)	
-	View.SetViewPorts(RightEyeSubViewPort, LeftEyeSubViewPort)	
+	View.SetViewPorts(LeftEyeSubViewPort, RightEyeSubViewPort)	
 	left_camera_3d.position.x = -(EyesSeparation)
 	right_camera_3d.position.x = EyesSeparation		
 	LeftEyePivot.position.y = EyeHeight
 	RightEyePivot.position.y = EyeHeight
-	left_camera_3d.rotate_object_local(Vector3.UP, -deg_to_rad(EyeDivergenceAngle))
-	right_camera_3d.rotate_object_local(Vector3.UP, deg_to_rad(EyeDivergenceAngle))
+	left_camera_3d.rotate_object_local(Vector3.UP, deg_to_rad(EyeConvergencyAngle))
+	right_camera_3d.rotate_object_local(Vector3.UP, -deg_to_rad(EyeConvergencyAngle))
 	
 func _process(delta: float) -> void:	
 	if not Active:

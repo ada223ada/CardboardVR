@@ -17,4 +17,4 @@ Properties:
 	* Input_Cancel : String  = Input to release mouse capture 
 	* EyesSeparation : float = Separation of eyes cameras
 	* EyeHeight : float =  Base height camera
-	* EyeDivergenceAngle : Eyes camera divergence angle (if negative = convergence)
+	* EyeConvergenceAngle : Eyes camera convergence angle

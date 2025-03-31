@@ -11,6 +11,7 @@ script = ExtResource("1_cc814")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_6ytbd")
 
-[node name="CardboardVRCamera" type="Camera3D" parent="."]
+[node name="CardboardVRCamera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.452642, 0)
 script = ExtResource("2_urgpd")
 metadata/_custom_type_script = "uid://s5ugrpk4rfw4"
