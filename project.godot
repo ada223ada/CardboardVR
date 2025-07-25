@@ -12,12 +12,16 @@ config_version=5
 
 config/name="CardboardVR"
 run/main_scene="uid://cdgotoljaxsxt"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.4", "C#", "Mobile")
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[dotnet]
+
+project/assembly_name="CardboardVR"
 
 [editor_plugins]
 
@@ -63,4 +67,9 @@ sensors/enable_gyroscope=true
 [rendering]
 
 renderer/rendering_method="mobile"
+renderer/rendering_method.web="forward_plus"
 textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_2d=2
+anti_aliasing/quality/msaa_3d=2
+anti_aliasing/quality/screen_space_aa=1
+anti_aliasing/quality/use_taa=true

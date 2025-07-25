@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b074dtgfkw0i4"]
 
-[ext_resource type="Script" uid="uid://cvxxnebjghslj" path="res://addons/cardboard_vr/scenes/cardboard_view.gd" id="1_76sec"]
+[ext_resource type="Script" uid="uid://dkctmqtujo1jk" path="res://addons/cardboard_vr/scenes/CardboardView.cs" id="1_76sec"]
 [ext_resource type="Shader" uid="uid://dm1wai2dl3ol6" path="res://addons/cardboard_vr/shaders/LensBarrelShader.gdshader" id="1_gbn34"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_76sec"]
